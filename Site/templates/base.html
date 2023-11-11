@@ -6,47 +6,109 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fly Explorer</title>
     <link href="{% static '/css/bootstrap.min.css' %}" rel="stylesheet" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Advent+Pro&display=swap" rel="stylesheet">
+    <style>
+      .nv .nav-item {
+      position: relative;
+    }
+
+    .nv .nav-item .nav-link {
+      padding-bottom: 0.5rem; /* Ajuste conforme necessário */
+    }
+
+    .nv .nav-item.active .nav-link::after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 2px; /* Altura da linha de underline */
+      background-color: #007bff; /* Cor da linha de underline */
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      }
+
+    .elemento1{
+      position: relative;
+      z-index: 1;
+    }
+    </style>
 
 
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">Navbar</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Features</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Pricing</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link disabled">Disabled</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <ul class="nav" style="background-color: #385565; border-radius: 10px 0px 0px 10px; color: white; padding-bottom: 5px; padding-right: 5px; padding-left: 10px;">
+        <li class="nav-item" style="padding-top: 10px; padding-right: 10px;">
+          <a>Canais de Atendimento: <img style="padding-right: 2%; margin-left: 10px;" width="42" src="{% static 'img/phone_icon.png'%}"/><img width="42" src="{% static 'img/email_icon.png'%}"/></a>
+        </li>
+        <li class="nav-item" style="border-left: black solid 2px; padding-top: 10px;">
+          <a href="#" style="text-decoration:none; color: white;"><img width="40" src="{% static 'img/shopping_icon.png' %}">Compras</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <ul class="nv nav nav-tabs" style="background-color: #d5efef;">
+    <li class="elemento1 nav-item">
+      <a class="nav-link" aria-current="page" href="#">Hoteis</a>
+    </li>
+    <li class="elemento1 nav-item">
+      <a class="nav-link" href="#">Passagens</a>
+    </li>
+    <li class="elemento1 nav-item">
+      <a class="nav-link" href="#">Pacotes</a>
+    </li>
+    <li class="elemento1 nav-item">
+      <a class="nav-link" href="#">Ofertas</a>
+    </li>
+    <li class="elemento1 nav-item">
+      <a class="nav-link" href="#">Alugueis</a>
+    </li>
+    <li class="elemento1 nav-item">
+      <a class="nav-link" href="#">Seguros</a>
+    </li>
+      <ul class="nav navbar" style="padding-left:35%;">
+        <li style="padding-right: 50px;"><a><img style="margin-right: 5px;" width="30" src="{% static 'img/user_icon.png' %}">Entrar</a></li>
+        <li><a><img style="margin-right: 5px;" width="30" src="{% static 'img/sets_icon.png' %}">Configurações</a></li>
+      </ul>
+  </ul>
     
     {% block content %}
 
     {% endblock %}
 
     <!-- Landing Page - Começo-->
-    <div>
 
+    <div class="row" style="width: 100%; height: 600px; background-color: #d5efef; margin-top: 10%;">
+        <h1 style="font-family: 'Advent Pro', sans-serif; margin-top: 40px; text-align: center;">Vantagens</h1>
+        <div class="card" style="width: 18rem;">
+          <img src="..." class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Os Melhores Preços</h5>
+            <p class="card-text">Na FlyExplorer temos os melhores preços e pacotes para suas viagens!</p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">An item</li>
+            <li class="list-group-item">A second item</li>
+            <li class="list-group-item">A third item</li>
+          </ul>
+          <div class="card-body">
+            <a href="#" class="card-link">Card link</a>
+            <a href="#" class="card-link">Another link</a>
+          </div>
+        </div>
+        
+        <h1 style="font-family: 'Advent Pro', sans-serif;">EXPLORE</h1>
     </div>
+  
     
     <!-- Sobre a Empresa -->
-    <div>
-
+    <div class="container-fluid">
+        <h2></h2>
+        
     </div>
     <!-- Duvidas Frequentes -->
     <div>
