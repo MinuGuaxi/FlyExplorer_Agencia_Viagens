@@ -1,0 +1,83 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Base ADM</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'fonts/AdventPro-Regular.ttf' %}">
+<style>
+
+    .nv .nav-item {
+    position: relative;
+  }
+
+  .nv .nav-item .nav-link {
+    padding-bottom: 0.5rem; /* Ajuste conforme necessário */
+  }
+
+  .nv .nav-item.active .nav-link::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px; /* Altura da linha de underline */
+    background-color: #007bff; /* Cor da linha de underline */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    }
+
+  
+
+  </style>
+</head>
+<body>
+    <div class="container-fluid">
+    <nav class="navbar navbar-expand-lg">
+        <ul class="nav">
+            <li class="nav-item" style="margin-right: 420px;">
+        <a class="navbar-brand" href="#">Navbar</a>
+            </li>
+            <li class="nav-item" style="font-family:'Times New Roman', Times, sans-serif; font-size: 30pt;">
+                <a>Area de Registros</a>
+            </li>
+        </ul>
+    </nav>
+    </div>
+      <nav class="navbar navbar-expand-lg" style="background-color: #d5efef; height: 60px;">
+        <div class="container-fluid">
+            <ul class="nv nav nav-tabs" style="background-color: #d5efef;">
+            
+      <li class="nav-item nav-item-active">
+        <a class="nav-link" aria-current="page" href="#">Hoteis</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'passagens' %}">Passagens</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'pacotes' %}">Pacotes</a>
+      </li>
+      <li class="nav-item ">
+        <a class="nav-link" href="{% url 'ofertas' %}">Ofertas</a>
+      </li>
+      <li class="nav-item ">
+        <a class="nav-link" href="{% url 'alugueis' %}">Alugueis</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'seguros' %}">Seguros</a>
+      </li>
+      <div style="background-color: white; border-radius: 10px 10px 10px 10px; margin-left: 350px;">
+        <ul class="nav navbar">
+          <li style="padding-right: 50px;"><a><img style="margin-right: 5px;" width="30" src="{% static 'img/user_icon.png' %}">Entrar</a></li>
+          <li><a><img style="margin-right: 5px;" width="30" src="{% static 'img/sets_icon.png' %}">Configurações</a></li>
+        </ul>
+      </div>
+    </ul>
+     
+      </div>
+    </nav>
+    
+
+</body>
+</html>
