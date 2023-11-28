@@ -2,7 +2,12 @@ from django.shortcuts import render
 
 
 def Index(request):
+
     return render(request, 'base.html')
+
+" 'HOTEIS' "
+def hoteis(request):
+    return render(request, 'paginas/hotel.html')
 
 "' PASSAGENS '"
 def passagens(request):
