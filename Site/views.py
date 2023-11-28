@@ -27,7 +27,3 @@ def alugueis(request):
 "' SEGUROS '"
 def seguros(request):
     return render(request, 'paginas/seguros.html')
-
-"' REDEFINIR '"
-def redefinir(request):
-    return render(request, 'paginas/r_senha.html')
