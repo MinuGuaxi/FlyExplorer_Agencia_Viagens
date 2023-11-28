@@ -1,1 +1,70 @@
-{% extends 'base.html' %}
+{% extends 'base.html' %} 
+{% block content %}
+
+  <div class="container mt-5" style="border: 1px solid black; height: 120px; background-color: #416980; color: white; border-radius: 10px;">
+    <div class="row">
+      <div class="col-md-3">
+        <h1 style="font-size: 20px;" class="mt-2"> Pacotes de viagens </h1>
+      </div>
+      <div class="col-sm-2">
+        <button class="btn-primary mt-2" style="border-radius: 10px;">Voo + hospedagens</button>
+
+      </div>
+      <div class="col-sm-3">
+        <button class="btn-primary mt-2" style="border-radius: 10px;">Voo + veiculos</button>
+
+      </div>
+    </div>
+    
+    <form action="/search" method="post">
+      <div class="row">
+
+        <div class="col-md-2">
+            <div class="form-group">
+              <label for="origem">Origem</label>
+              <input type="text" class="form-control" id="origem" name="origem" placeholder="Ex: São Paulo">
+            </div>
+        </div>
+
+        <div class="col-md-2">
+          <div class="form-group">
+            <label for="destino">Destino</label>
+            <input type="text" class="form-control" id="destino" name="destino" placeholder="Ex: Rio de Janeiro">
+          </div>
+        </div>
+     
+        <div class="col-md-2">
+          <div class="form-group">
+            <label for="data-ida">Ida</label>
+            <input type="date" class="form-control" id="data-ida" name="data-ida">
+          </div>
+        </div>
+        <div class="col-md-2">
+          <div class="form-group">
+            <label for="data-volta">Volta</label>
+            <input type="date" class="form-control" id="data-volta" name="data-volta">
+          </div>
+        </div>
+        <div class="col-md-1">
+          <div class="form-group">
+            <label for="qtd-quarto">Quartos</label>
+            <input type="text" class="form-control" id="qtd-quarto" name="qtd-quarto">
+          </div>
+        </div>
+        <div class="col-md-1">
+          <div class="form-group">
+            <label for="qtd-pessoas">Pessoas</label>
+            <input type="text" class="form-control" id="qtd-pessoas" name="qtd-pessoas">
+          </div>
+        </div>
+        <div class="col-md-1 pt-3">
+          <div class="form-group">
+          <button type="submit" class="btn btn-primary">Buscar</button>
+        </div>
+        </div>
+      </div>
+    </form>
+  </div>
+
+
+ {% endblock %} 

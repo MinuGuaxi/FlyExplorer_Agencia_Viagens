@@ -77,12 +77,70 @@
   </ul>
     
     {% block content %}
-
+    <div class="container">
+      <h1 class="mt-5">Buscar hospedagens</h1>
+      <form action="/search" method="get">
+        <div class="row">
+          <div class="col-md-3">
+            <div class="form-group">
+              <label for="origem">Origem</label>
+              <input type="text" class="form-control" id="origem" name="origem" placeholder="Ex: São Paulo">
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="form-group">
+              <label for="destino">Destino</label>
+              <input type="text" class="form-control" id="destino" name="destino" placeholder="Ex: Rio de Janeiro">
+            </div>
+          </div>
+       
+       
+          <div class="col-md-3">
+            <div class="form-group">
+              <label for="data-ida">Data de ida</label>
+              <input type="date" class="form-control" id="data-ida" name="data-ida">
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="form-group">
+              <label for="data-volta">Data de volta</label>
+              <input type="date" class="form-control" id="data-volta" name="data-volta">
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-check">
+              <input type="checkbox" class="form-check-input" id="ida-e-volta" name="ida-e-volta">
+              <label class="form-check-label" for="ida-e-volta">Ida e volta</label>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-check">
+              <input type="checkbox" class="form-check-input" id="solicitar-hospedagem" name="solicitar-hospedagem">
+              <label class="form-check-label" for="solicitar-hospedagem">Solicitar hospedagem</label>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="quantidade-passageiros">Quantidade de passageiros</label>
+              <input type="number" class="form-control" id="quantidade-passageiros" name="quantidade-passageiros" min="1" max="10">
+            </div>
+          </div>
+          <div class="col-md-6">
+            <button type="submit" class="btn btn-primary">Buscar</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  
     {% endblock %}
 
     <!-- Landing Page - Começo-->
 
-    <div class="text-center" style="width: 100%; height: 400px; background-color: #d5efef; margin-top: 10%;">
+    <div class="text-center" style="width: 100%; height: 400px; background-color: #d5efef; margin-top: 5%;">
         <h1 style="font-family: 'Advent Pro', sans-serif; padding-top: 30px; text-align: center;">Vantagens</h1>
         
         <div class="row justify-content-center" style="padding-top:20px;">
