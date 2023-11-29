@@ -4,6 +4,7 @@ from Site import views
 
 urlpatterns = [
     path('', views.Index),
+    path('login/', views.tela_login, name='tela_login'),
     path('hoteis/', views.hoteis, name='hoteis'),
     path('passagens/', views.passagens, name='passagens'),
     path('pacotes/', views.pacotes, name='pacotes'),

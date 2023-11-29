@@ -4,6 +4,13 @@ from django.shortcuts import render
 def Index(request):
 
     return render(request, 'base.html')
+"' Tela de Login'"
+def tela_login(request):
+    return render(request, 'paginas/login.html')
+
+" 'Redefinir Senha' "
+def redefinir(request):
+    return render(request, 'paginas/r_senha')
 
 " 'HOTEIS' "
 def hoteis(request):
