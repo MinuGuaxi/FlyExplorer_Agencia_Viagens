@@ -49,6 +49,9 @@ def c_passagens(request):
 def c_pacotes(request):
     return render(request, 'paginas/r_pacotes.html')
 
+def c_ofertas(request):
+    return render(request, 'paginas/r_ofertas.html')
+
 def c_alugueis(request):
     return render(request, 'paginas/r_alugueis.html')
 
