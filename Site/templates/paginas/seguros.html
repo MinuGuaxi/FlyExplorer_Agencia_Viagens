@@ -1,8 +1,8 @@
 {% extends 'base.html' %}
 {% block content %}
 
-<div class="container">
-    <h1 class="mt-4">Busca de passagens aéreas</h1>
+<div class="container mt-4" style="border: 1px solid black; height: 150px; background-color: #416980; color: white; border-radius: 10px;">
+    <h1 style="font-size: 20px;" class="mt-1">Seguros de Viagem</h1>
     <form action="/search" method="post">
       <div class="row">
         <div class="col-md-3">
@@ -13,13 +13,13 @@
         </div>
         <div class="col-md-2">
           <div class="form-group">
-            <label for="data-ida">Entrada</label>
+            <label for="data-ida">Ida</label>
             <input type="date" class="form-control" id="data-ida" name="data-ida">
           </div>
         </div>
         <div class="col-md-2">
           <div class="form-group">
-            <label for="data-volta">Saida</label>
+            <label for="data-volta">Volta</label>
             <input type="date" class="form-control" id="data-volta" name="data-volta">
           </div>
         </div>
@@ -29,7 +29,7 @@
               <input type="text" class="form-control" id="qtd-pessoas" name="qtd-pessoas">
             </div>
         </div>
-        <div class="col-md-1 pt-3">
+        <div class="col-md-1 pt-4">
             <div class="form-group">
             <button type="submit" class="btn btn-primary">Buscar</button>
           </div>

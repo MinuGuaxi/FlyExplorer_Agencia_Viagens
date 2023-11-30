@@ -1,1 +1,55 @@
-feliz
+{% extends 'base.html' %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <title>Busca de passagens aéreas</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+</head>
+<body>
+  <div class="container">
+    <form action="/search" method="post">
+      <div class="form-group">
+        <label for="origem">Origem</label>
+        <input type="text" class="form-control" id="origem" name="origem">
+      </div>
+      <div class="form-group">
+        <label for="destino">Destino</label>
+        <input type="text" class="form-control" id="destino" name="destino">
+      </div>
+      <div class="form-group">
+        <label for="ida">Ida</label>
+        <input type="date" class="form-control" id="ida" name="ida">
+      </div>
+      <div class="form-group">
+        <label for="volta">Volta</label>
+        <input type="date" class="form-control" id="volta" name="volta">
+      </div>
+      <div class="form-group">
+        <label for="passageiros">Passageiros</label>
+        <select class="form-control" id="passageiros" name="passageiros">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="classe">Classe</label>
+        <select class="form-control" id="classe" name="classe">
+          <option value="economy">Economy</option>
+          <option value="business">Business</option>
+          <option value="first">First</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <input type="checkbox" class="form-check-input" id="incluir-hospedagem" name="incluir-hospedagem">
+        <label class="form-check-label" for="incluir-hospedagem">Incluir hospedagem</label>
+      </div>
+      <button type="submit" class="btn btn-primary">Buscar</button>
+    </form>
+  </div>
+</body>
+</html>
+{% endblock %}
