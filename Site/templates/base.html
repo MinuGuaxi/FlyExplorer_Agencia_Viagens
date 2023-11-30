@@ -70,10 +70,21 @@
     <li class="elemento1 nav-item">
       <a class="nav-link" href="{% url 'seguros' %}">Seguros</a>
     </li>
-      <ul class="nav navbar" style="padding-left:35%;">
-        <li style="padding-right: 50px;"><a href="{% url 'tela_login' %}"><img style="margin-right: 5px;" width="30" src="{% static 'img/user_icon.png' %}">Entrar</a></li>
-        <li><a><img style="margin-right: 5px;" width="30" src="{% static 'img/sets_icon.png' %}">Configurações</a></li>
+    <li class="elemento1 nav-item" style="margin-right: 30%;">
+      <a class="nav-link" href="{% url 'seguros' %}">Seguros</a>
+    </li>
+    <div class="dropdown">
+      <a class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" style="text-decoration-line: none;">
+
+        <img width="50" src="{% static 'img/user_icon.png' %}">Minha Conta 
+      </a>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="{% url 'tela_login' %}">Perfil</a></li>
+        <li><a class="dropdown-item" href="#">Minhas compras</a></li>
+        <li><a class="dropdown-item" href="#">Configurações</a></li>
+        <li><a class="dropdown-item" href="#">temporario</a></li>
       </ul>
+    </div>
   </ul>
     
     {% block content %}
@@ -319,5 +330,6 @@
         
     </div>
     <script src="{% static '/js/bootstrap.min.js' %}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 </html>
