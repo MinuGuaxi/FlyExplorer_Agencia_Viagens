@@ -12,6 +12,6 @@ urlpatterns = [
     path('alugueis/', views.alugueis, name='alugueis'),
     path('seguros/', views.seguros, name='seguros'),
     path('redefinir/', views.redefinir, name='redefinir'),
-    path('temporario/', views.temporario, name='temporario')
+    path('registrar_hotel/', views.c_hotel, name='c_hoteis')
 ]
  
