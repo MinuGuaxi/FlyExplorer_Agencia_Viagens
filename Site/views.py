@@ -39,3 +39,18 @@ def alugueis(request):
 "' SEGUROS '"
 def seguros(request):
     return render(request, 'paginas/seguros.html')
+
+def c_hotel(request):
+    return render(request, 'paginas/r_hoteis.html')
+
+def c_passagens(request):
+    return render(request, 'paginas/r_passagens.html')
+
+def c_pacotes(request):
+    return render(request, 'paginas/r_pacotes.html')
+
+def c_alugueis(request):
+    return render(request, 'paginas/r_alugueis.html')
+
+def c_seguros(request):
+    return render(request, 'paginas/r_seguros.html')
