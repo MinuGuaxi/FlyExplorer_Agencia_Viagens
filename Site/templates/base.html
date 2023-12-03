@@ -51,7 +51,7 @@
       </ul>
     </div>
   </nav>
-  <ul class="nv nav nav-tabs" style="background-color: #d5efef;">
+  <ul class="nv nav nav-tabs" style="background-color: #b2e6e6;">
     <li class="elemento1 nav-item">
       <a class="nav-link" aria-current="page" href="{% url 'hoteis' %}">Hoteis</a>
     </li>
@@ -67,14 +67,12 @@
     <li class="elemento1 nav-item">
       <a class="nav-link" href="{% url 'alugueis' %}">Alugueis</a>
     </li>
-    <li class="elemento1 nav-item">
-      <a class="nav-link" href="{% url 'seguros' %}">Seguros</a>
-    </li>
-    <li class="elemento1 nav-item" style="margin-right: 30%;">
+    
+    <li class="elemento1 nav-item" style="margin-right: 50%;">
       <a class="nav-link" href="{% url 'seguros' %}">Seguros</a>
     </li>
     <div class="dropdown ">
-      <a class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" style="text-decoration-line: none;">
+      <a class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" style="cursor: pointer; text-decoration-line: none;">
 
         <img width="50" src="{% static 'img/user_icon.png' %}">Minha Conta 
       </a>
@@ -82,66 +80,52 @@
         <li><a class="dropdown-item" href="{% url 'tela_login' %}">Perfil</a></li>
         <li><a class="dropdown-item" href="#">Minhas compras</a></li>
         <li><a class="dropdown-item" href="#">Configurações</a></li>
-        <li><a class="dropdown-item" href="{% url 'c_hoteis' %}">temporario</a></li>
+        <li><a class="dropdown-item" href="{% url 'c_hoteis' %}">acesso especial</a></li>
       </ul>
     </div>
   </ul>
     
     {% block content %}
-    <div class="container">
-      <h1 class="mt-5">Buscar hospedagens</h1>
-      <form action="/search" method="get">
+    <div class="container mt-4" style="border: 1px solid black; height: 120px; background-color: #416980; color: white; border-radius: 10px;">
+      <h1 style="font-size: 20px;" class="mt-1">Buscar Hoteis</h1>
+      <form action="/search" method="post">
         <div class="row">
+  
           <div class="col-md-3">
             <div class="form-group">
-              <label for="origem">Origem</label>
-              <input type="text" class="form-control" id="origem" name="origem" placeholder="Ex: São Paulo">
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="form-group">
-              <label for="destino">Destino</label>
+              <labelfor="destino">Destino</label>
               <input type="text" class="form-control" id="destino" name="destino" placeholder="Ex: Rio de Janeiro">
             </div>
           </div>
        
-       
-          <div class="col-md-3">
+          <div class="col-md-2">
             <div class="form-group">
-              <label for="data-ida">Data de ida</label>
+              <label for="data-ida">Entrada</label>
               <input type="date" class="form-control" id="data-ida" name="data-ida">
             </div>
           </div>
-          <div class="col-md-3">
+          <div class="col-md-2">
             <div class="form-group">
-              <label for="data-volta">Data de volta</label>
+              <label for="data-volta">Saida</label>
               <input type="date" class="form-control" id="data-volta" name="data-volta">
             </div>
           </div>
-        </div>
-        <div class="row">
-          <div class="col-md-6">
-            <div class="form-check">
-              <input type="checkbox" class="form-check-input" id="ida-e-volta" name="ida-e-volta">
-              <label class="form-check-label" for="ida-e-volta">Ida e volta</label>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="form-check">
-              <input type="checkbox" class="form-check-input" id="solicitar-hospedagem" name="solicitar-hospedagem">
-              <label class="form-check-label" for="solicitar-hospedagem">Solicitar hospedagem</label>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-6">
+          <div class="col-md-1">
             <div class="form-group">
-              <label for="quantidade-passageiros">Quantidade de passageiros</label>
-              <input type="number" class="form-control" id="quantidade-passageiros" name="quantidade-passageiros" min="1" max="10">
+              <label for="qtd-quarto">Quartos</label>
+              <input type="text" class="form-control" id="qtd-quarto" name="qtd-quarto">
             </div>
           </div>
-          <div class="col-md-6">
+          <div class="col-md-1">
+            <div class="form-group">
+              <label for="qtd-pessoas">Pessoas</label>
+              <input type="text" class="form-control" id="qtd-pessoas" name="qtd-pessoas">
+            </div>
+          </div>
+          <div class="col-md-1 pt-4">
+            <div class="form-group">
             <button type="submit" class="btn btn-primary">Buscar</button>
+          </div>
           </div>
         </div>
       </form>
@@ -151,7 +135,7 @@
 
     <!-- Landing Page - Começo-->
 
-    <div class="text-center" style="width: 100%; height: 400px; background-color: #d5efef; margin-top: 5%;">
+    <div class="text-center" style="width: 100%; height: 400px; background-color: #b2e6e6; margin-top: 5%;">
         <h1 style="font-family: 'Advent Pro', sans-serif; padding-top: 30px; text-align: center;">Vantagens</h1>
         
         <div class="row justify-content-center" style="padding-top:20px;">
@@ -182,7 +166,7 @@
 
     </div>
 <!-- Duvidas Frequentes -->
-    <div style="width: 100%; height: 500px; background-color: #d5efef; border: black solid 1px">
+    <div style="width: 100%; height: 500px; background-color: #b2e6e6; border: black solid 1px">
       <div class="row justify-content-center" style="padding-top: 20px;">
         <div class="figure" style="padding-bottom: 2%;">
           <img width="100" src="{% static 'img/ask_icon.png' %}">
@@ -279,7 +263,7 @@
     </div>
 
  <!-- Rodapé -->
-    <div style="width: 100%; height: 90px; background-color: #d5efef; border: black solid 1px">
+    <div style="width: 100%; height: 90px; background-color: #b2e6e6; border: black solid 1px">
     
       <div class="row" style="padding-left: 5%; padding-top: 2%;">
         <div class="figure" >

@@ -67,9 +67,9 @@
       <li class="nav-item">
         <a class="nav-link" href="{% url 'c_seguros' %}">Seguros</a>
       </li>
-      <div style="background-color: white; border-radius: 10px 10px 10px 10px; margin-left: 350px;">
+      <div style="background-color: white; border-radius: 10px 10px 10px 10px; margin-left: 900px;">
         <ul class="nav navbar">
-          <li style="padding-right: 50px;"><a><img style="margin-right: 5px;" width="30" src="{% static 'img/user_icon.png' %}">Entrar</a></li>
+          <li style="padding-right: 50px;"><a href="{% url 'inicio' %}"><img style="margin-right: 5px;" width="30" src="{% static 'img/user_icon.png' %}">Sair</a></li>
           <li><a><img style="margin-right: 5px;" width="30" src="{% static 'img/sets_icon.png' %}">Configurações</a></li>
         </ul>
       </div>
@@ -77,6 +77,9 @@
      
       </div>
     </nav>
+
+    {% block content %}
+    {% endblock %}
     
 
 </body>

@@ -10,7 +10,7 @@ def tela_login(request):
 
 " 'Redefinir Senha' "
 def redefinir(request):
-    return render(request, 'paginas/r_senha')
+    return render(request, 'paginas/r_senha.html')
 
 " 'HOTEIS' "
 def hoteis(request):
