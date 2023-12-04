@@ -3,26 +3,26 @@
 
 <div class="container mt-5" style="border: 1px solid black; height: 500px; background-color: #416980; color: white; border-radius: 10px; width: 1000px;">
     <form action="/register" method="post">
-      <h2>Registrar Ofertas</h2>
+      <h2>Registrar Pacotes</h2>
       <div class="form-group">
-        <label for="nome">Nome</label>
-        <input type="text" class="form-control" id="nome" name="nome" placeholder="Nome do hotel">
+        <label for="ID_oft">ID</label>
+        <input type="number" class="form-control" id="ID_oft" name="ID_oft" placeholder="Número de identificação">
       </div>
       <div class="form-group">
-        <label for="id">ID</label>
-        <input type="number" class="form-control" id="id" name="id" placeholder="Número de identificação">
+        <label for="n_oft">Nome</label>
+        <input type="text" class="form-control" id="n_oft" name="n_oft" placeholder="Nome da oferta">
       </div>
       <div class="form-group">
-        <label for="telefone">Telefone</label>
-        <input type="tel" class="form-control" id="telefone" name="telefone" placeholder="Número para contato">
+        <label for="e_oft">Tipo de oferta:</label>
+        <input type="text" class="form-control" id="e_oft" name="e_oft" placeholder="Especifique o tipo de oferta">
       </div>
       <div class="form-group">
-        <label for="valor">Valor</label>
-        <input type="number" class="form-control" id="valor" name="valor" placeholder="Valor da hospedagem">
+        <label for="dsc_oft">Descrição:</label>
+        <input type="text" class="form-control" id="dsc_oft" name="dsc_oft" placeholder="Descreva esta oferta">
       </div>
       <div class="form-group">
-        <label for="servicos">Serviços</label>
-        <select class="form-control" id="servicos" name="servicos">
+        <label for="s_oft">Serviços:</label>
+        <select class="form-control" id="s_oft" name="s_oft">
           <option value="1">Alimentação</option>
           <option value="2">Estacionamento</option>
           <option value="3">Wi-Fi</option>
@@ -31,8 +31,12 @@
         </select>
       </div>
       <div class="form-group">
-        <label for="imagem">Imagem</label>
-        <input type="file" class="form-control-file" id="imagem" name="imagem">
+        <label for="v_oft">Valor</label>
+        <input type="number" class="form-control" id="v_oft" name="v_oft" placeholder="Valor da oferta">
+      </div>
+      <div class="form-group">
+        <label for="img_oft">Imagem</label>
+        <input type="file" class="form-control-file" id="img_oft" name="img_oft">
       </div>
       <button type="submit" class="btn btn-primary">Registrar</button>
     </form>

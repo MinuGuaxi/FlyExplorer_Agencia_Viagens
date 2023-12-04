@@ -3,26 +3,18 @@
 
 <div class="container mt-5" style="border: 1px solid black; height: 500px; background-color: #416980; color: white; border-radius: 10px; width: 1000px;">
     <form action="/register" method="post">
-      <h2>Registrar Seguros</h2>
+      <h2>Registrar Pacotes</h2>
       <div class="form-group">
-        <label for="nome">Nome</label>
-        <input type="text" class="form-control" id="nome" name="nome" placeholder="Nome do hotel">
+        <label for="ID_a">ID</label>
+        <input type="number" class="form-control" id="ID_a" name="ID_a" placeholder="Número de identificação">
       </div>
       <div class="form-group">
-        <label for="id">ID</label>
-        <input type="number" class="form-control" id="id" name="id" placeholder="Número de identificação">
+        <label for="n_a">Nome</label>
+        <input type="text" class="form-control" id="n_a" name="n_a" placeholder="Nome do seguro">
       </div>
       <div class="form-group">
-        <label for="telefone">Telefone</label>
-        <input type="tel" class="form-control" id="telefone" name="telefone" placeholder="Número para contato">
-      </div>
-      <div class="form-group">
-        <label for="valor">Valor</label>
-        <input type="number" class="form-control" id="valor" name="valor" placeholder="Valor da hospedagem">
-      </div>
-      <div class="form-group">
-        <label for="servicos">Serviços</label>
-        <select class="form-control" id="servicos" name="servicos">
+        <label for="s_a">Tipos de Seguro:</label>
+        <select class="form-control" id="s_a" name="s_a">
           <option value="1">Alimentação</option>
           <option value="2">Estacionamento</option>
           <option value="3">Wi-Fi</option>
@@ -31,8 +23,16 @@
         </select>
       </div>
       <div class="form-group">
-        <label for="imagem">Imagem</label>
-        <input type="file" class="form-control-file" id="imagem" name="imagem">
+        <label for="dsc_a">Descrição:</label>
+        <input type="text" class="form-control" id="dsc_a" name="dsc_a" placeholder="Descreva este seguro">
+      </div>
+      <div class="form-group">
+        <label for="v_a">Valor</label>
+        <input type="number" class="form-control" id="v_a" name="v_a" placeholder="Valor do seguro">
+      </div>
+      <div class="form-group">
+        <label for="img_a">Imagem</label>
+        <input type="file" class="form-control-file" id="img_a" name="img_a">
       </div>
       <button type="submit" class="btn btn-primary">Registrar</button>
     </form>
