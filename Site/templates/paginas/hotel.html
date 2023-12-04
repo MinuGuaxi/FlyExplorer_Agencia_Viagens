@@ -1,14 +1,21 @@
 {% extends 'base.html' %} 
 {% block content %}
+<style>
+  .tabela{
+    background: linear-gradient(to right, #84dbe3, #b4e1ef);
+    border-radius: 10px;
+    margin-top: 30px;
+  }
+</style>
 
 <div class="container mt-4" style="border: 1px solid black; height: 120px; background-color: #416980; color: white; border-radius: 10px;">
     <h1 style="font-size: 20px;" class="mt-1">Buscar Hoteis</h1>
-    <form action="/search" method="post">
+    <form action="/exibir_h" method="get">
       <div class="row">
 
         <div class="col-md-3">
           <div class="form-group">
-            <labelfor="destino">Destino</label>
+            <label for="destino">Destino</label>
             <input type="text" class="form-control" id="destino" name="destino" placeholder="Ex: Rio de Janeiro">
           </div>
         </div>
@@ -39,11 +46,40 @@
         </div>
         <div class="col-md-1 pt-4">
           <div class="form-group">
-          <button type="submit" class="btn btn-primary">Buscar</button>
+          <button type="submit" data-toggle="modal" data-target="#infoModal" class="btn btn-primary">Buscar</button>
         </div>
         </div>
       </div>
     </form>
+  </div>
+  <center>
+  <div class="col-sm-4 col-md-6 col-lg-6 col-x1-1 justify-content-center tabela" style="margin-left: 8%; padding-top: 20px;">
+    <div class="table-responsive justify-content-center">
+        <table class="table table-striped">
+            <h1 style="color: white; font-family: 'Alegreya Sans SC', sans-serif; text-align: center; color: black;">Resultados da busca</h1>
+            <thead style="font-family: 'Cormorant Infant', serif;">
+                <tr>
+                    <th style="border-radius: 15px 0px 0px 0px; border-bottom: 1px solid;">ID</th>
+                    <th style="border-bottom: 1px solid;">Nome do Hotel</th>
+                    <th style="border-bottom: 1px solid;">Contato</th>
+                    <th style="border-bottom: 1px solid;">Serviços</th>
+                    <th style="border-bottom: 1px solid;">Valor</th>
+                </tr>
+            </thead>
+            <tbody style="font-family: 'Cormorant Infant', serif;">
+                {% for Hotel in ht %}
+            <tr>
+                <td>{{Hotel.id}}</td>
+                <td>{{Hotel.nome}}</td>
+                <td>{{Hotel.telefone}}</td>
+                <td>{{Hotel.servicos}}</td>
+                <td>R$ {{Hotel.valor}}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+            </table>
+          </center>
+  </div>
   </div>
 
 

@@ -77,9 +77,12 @@ WSGI_APPLICATION = 'FlyExplorer.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR/'db.sqlite3',
-        
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'teste',
+        'USER':'minu',
+        'PASSWORD':'123',
+        'HOST':'localhost',
+        'PORT':'3307',
     }
 }
 

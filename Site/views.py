@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import redirect, render
 from Site.models import Hotel, Passagem, Pacotes, Ofertas, Alugueis, Seguros
 
 
@@ -16,6 +16,10 @@ def redefinir(request):
 " 'HOTEIS' "
 def hoteis(request):
     return render(request, 'paginas/hotel.html')
+
+def exibir_h(request):
+    ht = Hotel.objects.all()
+    return render(request, 'paginas/hotel.html', {'ht': ht})
 
 "' PASSAGENS '"
 def passagens(request):
@@ -55,7 +59,7 @@ def R_hotel(request):
     telefone=request.POST['t_h']
     valor=request.POST['v_h']
     servicos=request.POST['s_h']
-    imagem=request.POST, request.FILES['img_h']
+    imagem=request.POST['img_h']
 
     hotel = Hotel.objects.create(id=id, nome=nome, telefone=telefone, valor=valor, servicos=servicos, imagem=imagem)
     return redirect('c_hoteis')
