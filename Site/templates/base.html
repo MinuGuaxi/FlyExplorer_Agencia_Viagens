@@ -32,6 +32,11 @@
     .elemento1{
       position: relative;
       z-index: 1;
+      border-bottom: #c8f5f5 5px solid;
+      margin-right: 20px;
+    }
+    body {
+      background-image: linear-gradient(45deg, rgb(19, 156, 156), #b2e6e6);
     }
     </style>
 
@@ -51,25 +56,25 @@
       </ul>
     </div>
   </nav>
-  <ul class="nv nav nav-tabs" style="background-color: #b2e6e6;">
+  <ul class="nv nav nav-tabs">
     <li class="elemento1 nav-item">
-      <a class="nav-link" aria-current="page" href="{% url 'hoteis' %}">Hoteis</a>
+      <a class="nav-link" aria-current="page" href="{% url 'hoteis' %}" style="color: black ;">Hoteis</a>
     </li>
     <li class="elemento1 nav-item">
-      <a class="nav-link" href="{% url 'passagens' %}">Passagens</a>
+      <a class="nav-link" href="{% url 'passagens' %}" style="color: black ;">Passagens</a>
     </li>
     <li class="elemento1 nav-item">
-      <a class="nav-link" href="{% url 'pacotes' %}">Pacotes</a>
+      <a class="nav-link" href="{% url 'pacotes' %}" style="color: black ;">Pacotes</a>
     </li>
     <li class="elemento1 nav-item">
-      <a class="nav-link" href="{% url 'ofertas' %}">Ofertas</a>
+      <a class="nav-link" href="{% url 'ofertas' %}" style="color: black ;">Ofertas</a>
     </li>
     <li class="elemento1 nav-item">
-      <a class="nav-link" href="{% url 'alugueis' %}">Alugueis</a>
+      <a class="nav-link" href="{% url 'alugueis' %}" style="color: black ;">Alugueis</a>
     </li>
     
-    <li class="elemento1 nav-item" style="margin-right: 50%;">
-      <a class="nav-link" href="{% url 'seguros' %}">Seguros</a>
+    <li class="elemento1 nav-item" style="margin-right: 40%;">
+      <a class="nav-link" href="{% url 'seguros' %}" style="color: black ;">Seguros</a>
     </li>
     <div class="dropdown ">
       <a class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" style="cursor: pointer; text-decoration-line: none;">
@@ -135,30 +140,30 @@
 
     <!-- Landing Page - Começo-->
 
-    <div class="text-center" style="width: 100%; height: 400px; background-color: #b2e6e6; margin-top: 5%;">
+    <div class="text-center" style="width: 100%; height: 500px; background-color: #90d8d8; margin-top: 5%; padding-bottom: 90px;">
         <h1 style="font-family: 'Advent Pro', sans-serif; padding-top: 30px; text-align: center;">Vantagens</h1>
         
         <div class="row justify-content-center" style="padding-top:20px;">
         
-            <div class="card" style="width: 18rem;">
-              <img src="..." class="card-img-top" alt="...">
+            <div class="card" style="width: 18rem; margin-bottom: 20px;">
+              <img src="{% static 'img/vtg1.jpg' %}" style="width: 100%;" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Comodidade</h5>
+                <p class="card-text">Na FlyExplorer você planeja a viagem dos seus sonhos na comodidade de sua casa!</p>
+              </div>
+            </div>
+            <div class="card" style="width: 18rem; margin-bottom: 20px;">
+              <img src="{% static 'img/vtg2.png' %}" height="250" class="card-img-top" alt="...">
               <div class="card-body">
                 <h5 class="card-title">Os Melhores Preços</h5>
                 <p class="card-text">Na FlyExplorer temos os melhores preços e pacotes para suas viagens!</p>
               </div>
             </div>
-            <div class="card" style="width: 18rem;">
-              <img src="..." class="card-img-top" alt="...">
+            <div class="card" style="width: 18rem; margin-bottom: 20px;">
+              <img src="{% static 'img/vtg3.jpg' %}" class="card-img-top" alt="...">
               <div class="card-body">
-                <h5 class="card-title">Os Melhores Preços</h5>
-                <p class="card-text">Na FlyExplorer temos os melhores preços e pacotes para suas viagens!</p>
-              </div>
-            </div>
-            <div class="card" style="width: 18rem;">
-              <img src="..." class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">Os Melhores Preços</h5>
-                <p class="card-text">Na FlyExplorer temos os melhores preços e pacotes para suas viagens!</p>
+                <h5 class="card-title">Os Melhores Destinos</h5>
+                <p class="card-text">Na FlyExplorer temos as melhores recomendações de destinos!</p>
               </div>
             </div>
     
@@ -166,8 +171,8 @@
 
     </div>
 <!-- Duvidas Frequentes -->
-    <div style="width: 100%; height: 500px; background-color: #b2e6e6; border: black solid 1px">
-      <div class="row justify-content-center" style="padding-top: 20px;">
+    <div style="width: 100%; height: 500px; background-color: #90d8d8;">
+      <div class="row justify-content-center" style="padding-top: 40px;">
         <div class="figure" style="padding-bottom: 2%;">
           <img width="100" src="{% static 'img/ask_icon.png' %}">
           <a style="font-size: 40px; ">Duvidas Frequentes</a>
@@ -178,37 +183,37 @@
           <div class="accordion" id="accordionExample">
             <div class="accordion-item">
               <h2 class="accordion-header">
-                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                  Accordion Item #1
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                  Como utilizo o site
                 </button>
               </h2>
               <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
                 <div class="accordion-body">
-                  <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                  Para <strong>utilizar</strong> o site, você deve navegar e explorar os melhores preços e recomendações. 
                 </div>
               </div>
             </div>
             <div class="accordion-item">
               <h2 class="accordion-header">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                  Accordion Item #2
+                  Como reservo uma hospedagem
                 </button>
               </h2>
               <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                 <div class="accordion-body">
-                  <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                  Para realizar uma <strong>hospedagem</strong>, você deve ir até a aba Hoteis, localizado na barra de navegação e pesquisar uma hospedagem de acordo com suas preferencias.
                 </div>
               </div>
             </div>
             <div class="accordion-item">
               <h2 class="accordion-header">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                  Accordion Item #3
+                  Sobre o nosso serviço
                 </button>
               </h2>
               <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                 <div class="accordion-body">
-                  <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                  A FlyExplorer valoriza e prioriza a <strong>eficiencia.</strong> Portanto, nosso serviço otimiza as pesquisas com os melhores <code>filtros</code>.
                 </div>
               </div>
             </div>
@@ -221,37 +226,37 @@
           <div class="accordion" id="accordionExample2">
             <div class="accordion-item">
               <h2 class="accordion-header">
-                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
-                  Accordion Item #4
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                  Como encontrar a sua viagem perfeita
                 </button>
               </h2>
               <div id="collapseFour" class="accordion-collapse collapse show" data-bs-parent="#accordionExample2">
                 <div class="accordion-body">
-                  <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                  Para <strong>encontrar</strong> a viagem que mais conbina com você, sugerimos buscar por nossas recomendaçõs presentes na aba <code>Ofertas</code>. Em ofertas, separamos os melhores preços e buscamos exibir os destinos mais buscados por nossos clientes.
                 </div>
               </div>
             </div>
             <div class="accordion-item">
               <h2 class="accordion-header">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                  Accordion Item #5
+                  Como faço uma parceria
                 </button>
               </h2>
               <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample2">
                 <div class="accordion-body">
-                  <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                  Para se candidatar uma <strong>parceria</strong>, vocẽ deve acessar o link de acesso <code>especial</code> para parceiros, localizado no menu de usuario e no rodapé.
                 </div>
               </div>
             </div>
             <div class="accordion-item">
               <h2 class="accordion-header">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-                  Accordion Item #6
+                  Como registro uma nova conta
                 </button>
               </h2>
               <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionExample2">
                 <div class="accordion-body">
-                  <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                  Para <strong>registrar</strong> uma nova conta, o usuario deve se direcionar ao <code>menu de usuario</code>, entrar em <code>Perfil / Login</code> e escolher a opção <code>Registrar</code> e em seguida basta preencher seus dados e registrar.
                 </div>
               </div>
             </div>
@@ -263,7 +268,7 @@
     </div>
 
  <!-- Rodapé -->
-    <div style="width: 100%; height: 90px; background-color: #b2e6e6; border: black solid 1px">
+    <div style="width: 100%; height: 90px; background-color: #90d8d8; border: black solid 1px">
     
       <div class="row" style="padding-left: 5%; padding-top: 2%;">
         <div class="figure" >
